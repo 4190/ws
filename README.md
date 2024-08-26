@@ -1,3 +1,8 @@
+In MainWindow.xaml.cs replace "xml" to "json" inn26 line to use json format
+string format = "xml";
+
+
+
 Example json
 ```json
 [
