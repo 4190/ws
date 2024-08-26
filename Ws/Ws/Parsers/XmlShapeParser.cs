@@ -9,7 +9,7 @@ using System.Runtime.InteropServices;
 
 namespace Ws.Parser
 {
-    public class XmlShapeParser : IShapeParser
+    public class XmlShapeParser : IXmlShapeParser
     {
         public ShapeBase ParseShape(XElement element)
         {
@@ -31,11 +31,6 @@ namespace Ws.Parser
             {
                 throw new NotSupportedException($"Shape type '{type}' is not supported.");
             }
-        }
-
-        public ShapeBase ParseShape(JsonElement element)
-        {
-            throw new NotSupportedException("XML parser cannot handle JSON elements.");
         }
 
         private Line ParseLine(XElement element)

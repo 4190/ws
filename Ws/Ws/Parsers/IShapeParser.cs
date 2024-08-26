@@ -4,9 +4,13 @@ using Ws.Models;
 
 namespace Ws.Parser
 {
-    public interface IShapeParser
+    public interface IJsonShapeParser
     {
         ShapeBase ParseShape(JsonElement element);
+    }
+
+    public interface IXmlShapeParser
+    {
         ShapeBase ParseShape(XElement element);
     }
 }

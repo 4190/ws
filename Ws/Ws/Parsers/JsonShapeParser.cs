@@ -8,7 +8,7 @@ using Ws.Models;
 
 namespace Ws.Parser
 {
-    public class JsonShapeParser : IShapeParser
+    public class JsonShapeParser : IJsonShapeParser
     {
         public ShapeBase ParseShape(JsonElement element)
         {
@@ -30,11 +30,6 @@ namespace Ws.Parser
             {
                 throw new NotSupportedException($"Shape type '{type}' is not supported.");
             }
-        }
-
-        public ShapeBase ParseShape(XElement element)
-        {
-            throw new NotSupportedException("JSON parser cannot handle XML elements.");
         }
 
         private Line ParseLine(JsonElement element)
